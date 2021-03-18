@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Add CEPP certificate</title>
+    </head>
+    <body>
+        <table style="width:100%">
+            <tr>
+                <td><label for="serialNumber">Serial Number</label></td>
+                <td><input id="serialNumber" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="issuer">Issuer</label></td>
+                <td>
+                    <select id="issuer"></select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="issuerEncryptionDetails">Issuer Encryption Details:</label></td>
+                <td><span id="issuerEncryptionDetails">-</span></td>
+            </tr>
+            <tr>
+                <td>Validity Period</td>
+            </tr>
+            <tr>
+                <td><label for="notBeforeDate">&emsp;Not Before:</label><label for="notBeforeTime"></label></td>
+                <td><input id="notBeforeDate" type="date"><input id="notBeforeTime" type="time"></td>
+            </tr>
+            <tr>
+                <td><label for="notAfterDate">&emsp;Not After:</label><label for="notAfterTime"></label></td>
+                <td><input id="notAfterDate" type="date"><input id="notAfterTime" type="time"></td>
+            </tr>
+            <tr>
+                <td><label for="subjectDomain">Subject Domain</label></td>
+                <td><input id="subjectDomain" type="text"></td>
+            </tr>
+            <tr>
+                <td><button id="attachCertificateButton" type="button">Attach Certificate</button></td>
+                <td><span id="attachCertificateResult"></span></td>
+            </tr>
+        </table>
+        <script src="scripts/data/ca_private_keys.js"></script>
+        <script src="scripts/api/elliptic/elliptic.js"></script>
+        <script src="scripts/cepp/certificate.js"></script>
+        <script type="module" src="scripts/cepp/compose.js"></script>
+    </body>
+</html>

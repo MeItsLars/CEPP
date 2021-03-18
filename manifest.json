@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "CEPP",
+  "description": "An example proof of concept addon for preventing phishing attacks via e-mail.",
+  "version": "1.0",
+  "author": "Lars Jeurissen",
+  "applications": {
+    "gecko": {
+      "id": "cepp@cs.ru.nl",
+      "strict_min_version": "78.0"
+    }
+  },
+  "compose_action": {
+    "default_title": "CEPP",
+    "default_popup": "compose-popup.html"
+  },
+  "message_display_action": {
+    "default_title": "Report Mail As Spam"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "messagesRead",
+    "messagesModify",
+    "compose",
+    "tabs",
+    "accountsRead"
+  ],
+  "experiment_apis": {
+    "composeMessageHeaders": {
+      "schema": "scripts/api/compose_message_headers/schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "composeMessageHeaders"
+          ]
+        ],
+        "script": "scripts/api/compose_message_headers/implementation.js"
+      }
+    }
+  }
+}
