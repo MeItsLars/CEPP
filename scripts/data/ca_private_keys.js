@@ -1,4 +1,4 @@
-caPrivateKeys = {
+const caPrivateKeys = {
     'RU Certificate Authority': {
         'algorithm': 'ecdsa',
         'parameters': {
