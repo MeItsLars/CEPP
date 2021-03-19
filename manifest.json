@@ -12,7 +12,7 @@
   },
   "compose_action": {
     "default_title": "CEPP",
-    "default_popup": "compose-popup.html"
+    "default_popup": "compose_popup.html"
   },
   "message_display_action": {
     "default_title": "Report Mail As Spam"
